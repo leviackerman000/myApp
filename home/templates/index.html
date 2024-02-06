@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django tutorial</title>
+    <style> table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+      }
+      th, td {
+        background-color: #96D4D4;
+      }</style>
 </head>
 <body>
-    <h1> hi this is me trying to learn and fight at the same time</h1>
 
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, iure molestias dicta optio itaque eius cupiditate explicabo inventore rem sit, ratione odit? Libero modi doloribus eius quis id dolore dolorem.</h2>
-    <p> I dont even know what it mean but I am dead serious thats is what i told my freind who is going to leave me soon<p>
+    <table class=" container">
+        <tr>
+          <th>S.no</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>CanVote</th>
+        </tr>
 
+        {% for people in people_data %}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{people.name}}</td>
+          <td>{{people.age}}</td>
+        </tr>
+
+        {% endfor %}
+      </table>
+hello ali sup man 
 </body>
 </html>
